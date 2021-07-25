@@ -1,0 +1,309 @@
+/* Google font  */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+/* font awsome link  */
+
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+
+/* main CSS start  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+
+/* Header CSS start  */
+
+#menu-bar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(42, 42, 243);
+
+}
+
+.img-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.img-icon img {
+    width: 70px;
+    height: 70px;
+}
+
+.fa-home {
+    color: #ffffff;
+}
+
+#navbar {
+    margin-right: 30px;
+    position: relative;
+    display: block;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+
+#navbar ul li {
+    margin-left: 2rem;
+    }
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+#navbar ul li a:hover {
+    background-color: rgb(51, 48, 48);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.397);
+}
+
+#toogle {
+    display: none;
+}
+
+.togglearea {
+    background-color: rgb(42, 42, 243);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ label {
+    text-align: center;
+    width: 45px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.togglearea { 
+    display: none;
+}
+
+.fa-bars {
+    color: white;
+}
+
+
+
+/* Header CSS END  */
+
+
+#welcome-section {
+    padding: 80px;
+    width: 100%;
+    background-color: rgb(112, 89, 247);
+    text-align: center;
+}
+
+#welcome-section img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+}
+
+#welcome-section p {
+    font-size: 1.5rem;
+    color: white;
+    font-style: italic;
+}
+
+#projects {
+    background-color: rgb(118, 103, 255);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#projects h1 {
+    font-size: 3rem;
+    padding: 50px;
+    color: white;
+}
+
+.project-tile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.webbox {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.281);
+    width: 250px;
+    height: 260px;
+    padding: 10px;
+    text-align: center;
+}
+
+.webbox img {
+    width: 230px;
+    height: 200px;
+    padding-bottom: 20px;
+}
+
+#profile-link {
+    padding: 10px 20px;
+    background-color: yellowgreen;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 255, 0.404);
+}
+
+.webbox a {
+    text-decoration: none;
+    color: white;
+}
+
+#contact {
+    background-color: rgb(0, 132, 255);
+    text-align: center;
+}
+
+#contact h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    padding-top: 50px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.socal {
+    padding: 50px;
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
+
+.icon a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.icon a:hover {
+    color: rgb(207, 206, 206);
+}
+
+footer {
+    width: 100%;
+    background-color: blue;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive website code start form here  */
+
+/* For all mobile device  */
+@media only screen and (max-width: 688px) {
+    
+
+    /* menu start  */
+
+    .img-icon img {
+        display: none;
+    }
+
+    
+
+    #navbar ul {
+        flex-direction: column;
+        display: none;
+        
+    }
+
+    #toogle:checked + #navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .togglearea {
+        display: flex;
+    }
+
+    #navbar ul li a {
+        padding: 2px 10px;
+    }
+
+
+    #welcome-section img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* menu end  */
+
+
+    .project-tile {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .webbox {
+        margin: auto;
+    }
+
+    #projects h1 {
+        font-size: 2rem;
+    }
+
+
+    .socal {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+}
